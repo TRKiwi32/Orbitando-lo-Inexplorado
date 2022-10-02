@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html class="bg">
+<!---->
+
+<head>
+    <!--encabezado del codigo-->
+    <title id>Orbitando lo Inexplorado</title>
+    <link rel="stylesheet" href="old1.css">
+    <!--libreria para script01-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!--script01, se encarga de desaparecer la portada y muestra el inicio-->
+    <script>
+        $(document).ready(function() {
+            $("#lst").click(function() {
+                $("#title").fadeToggle(400);
+
+                function delay(time) {
+                    return new Promise(resolve => setTimeout(resolve, time));
+                }
+                delay(1000).then(() =>
+                    $("#list").fadeToggle(400));
+            });
+        });
+    </script>
+
+</head>
+
+<!--cuerpo base de la pagina-->
+
+<body>
+    <!--boton de transicion de portada a inicio-->
+    <p class="wrap" id="buttonn" style>
+        <button class="button" style="display:inline" id="lst">
+    </button>
+    </p>
+    <!--Menu de inicio-->
+    <p class="bg2">
+        <!--lista de opciones del inicio-->
+        <ul class="plist" id="list" style="display: none;">
+            <!--lista inicio-->
+            <li class="ab" style="display:inline">
+                <button class="btnlist">
+          Inicio
+          <!--sublistas de opciones I-->
+             <ul class="homecnt">
+               <li>¿Quienes somos?</li>
+          </ul>
+        </button>
+            </li>
+            <!--lista historia-->
+            <li class="ab" style="display:inline">
+                <button class="btnlist">
+          Historia
+          <!--sublista de opciones H-->
+          <ul class="homecnt">
+            <li>Introduccion</li>
+            <li>Objetivo</li>
+            <li>Diseño</li>
+            <li>Descubrimientos</li>
+          </ul>
+        </button>
+            </li>
+        </ul>
+    </p>
+    <!--Titulo de portada-->
+    <div class="title" style id="title">
+        <p>
+            ORBITANDO
+        </p>
+        <p>
+            LO
+        </p>
+        <p>
+            INEXPLORADO
+        </p>
+    </div>
+</body>
+
+</html>
